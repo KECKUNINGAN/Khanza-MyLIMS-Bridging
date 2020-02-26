@@ -1,5 +1,5 @@
 # SIMKES Khanza MYLIMS Bridging Via LISLICA Script
-Bridging SIMKES Khanza dental Sistem Informasi Laboratorium MyLIMS
+Bridging SIMKES Khanza dengan Sistem Informasi Laboratorium MyLIMS
 
 Setting Nginx Rewrite
 ```php
