@@ -7,17 +7,13 @@ foreach($data['test'] as $key => $value) {
     $data_array[] = $value['test_id']; 
 }
 
-$data['demografi']['umur'] = '12';
-$data['demografi']['u_satuan'] = 'Tahun';
-$data['demografi']['u_lengkap'] = '12 Tahun';
-
-//$tgl_lahir = $data['demografi']['tgl_lahir'];
-//$tanggal = new DateTime($tgl_lahir);
-//$today = new DateTime('today');
-//$y = $today->diff($tanggal)->y;
-//$m = $today->diff($tanggal)->m;
-//$d = $today->diff($tanggal)->d;
-//$u_lengkap = "'.$y.' tahun '.$m.' bulan '.$d.' hari";
+$tgl_lahir = $data['demografi']['tgl_lahir'];
+$tanggal = new DateTime($tgl_lahir);
+$today = new DateTime('today');
+$y = $today->diff($tanggal)->y;
+$m = $today->diff($tanggal)->m;
+$d = $today->diff($tanggal)->d;
+$u_lengkap = "'.$y.' tahun '.$m.' bulan '.$d.' hari";
 
 $post = array(
     'method' => 'addCekup', 
@@ -28,7 +24,7 @@ $post = array(
         'tgl_lahir' => $data['demografi']['tgl_lahir'], 
         'umur' => $data['demografi']['umur'], 
         'u_satuan' => $data['demografi']['u_satuan'], 
-        'u_lengkap' => $data['demografi']['u_lengkap'], 
+        'u_lengkap' => $u_lengkap, 
         'no_transaksi' => $data['transaksi']['no_order'], 
         'nm_ruang' => $data['transaksi']['ruangan'], 
         'id_kelas' => $data['transaksi']['id_kelas'], 
